@@ -1,4 +1,4 @@
-package com.example;
+package com.example.leetcode;
 
 /**
  * Created by mrz on 17/7/17.
