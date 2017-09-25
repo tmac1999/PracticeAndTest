@@ -1,5 +1,9 @@
 package com.example.leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 /**
  * Created by mrz on 17/8/29.
  * 7. Reverse Integer
@@ -27,6 +31,11 @@ public class ReverseInteger {
         int x = 1534236469;
         int y = new Solution().reverse(x);
         System.out.println("x===" + y);
+        HashMap<Object, Object> hashMap = new HashMap<>();
+        Set<Map.Entry<Object, Object>> entries = hashMap.entrySet();
+
+        Set<Object> objects = hashMap.keySet();
+
     }
 
     static class Solution {
