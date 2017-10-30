@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.example.mrz.practiceandtest"
@@ -29,4 +29,5 @@ dependencies {
     //testCompile 'junit:junit:4.12'
     testCompile 'org.robolectric:robolectric:3.0-rc3'
 
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 }
