@@ -1,7 +1,7 @@
 package com.example.mrz.practiceandtest;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -17,7 +17,7 @@ public class TestImageViewActivity extends AppCompatActivity {
         lv.setAdapter(new BaseAdapter() {
             @Override
             public int getCount() {
-                return 20;
+                return 3;
             }
 
             @Override
