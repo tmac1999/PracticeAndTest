@@ -1,7 +1,9 @@
 package com.example.mrz.practiceandtest;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -33,8 +35,23 @@ public class TestImageViewActivity extends AppCompatActivity {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
                 View view = View.inflate(TestImageViewActivity.this, R.layout.item, null);
+//                ImageView img = view.findViewById(R.id.iv);
+//                img.setLayoutParams(new LinearLayout.LayoutParams(getScreenWidth(TestImageViewActivity.this),getScreenWidth(TestImageViewActivity.this)/2));
+
                 return view;
             }
         });
+    }
+
+    public static int getScreenWidth(Activity activity) {
+        DisplayMetrics metrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        return metrics.widthPixels;
+    }
+
+    public static int getScreenHeight(Activity activity) {
+        DisplayMetrics metrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
+        return metrics.heightPixels;
     }
 }
