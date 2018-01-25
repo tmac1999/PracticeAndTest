@@ -10,19 +10,36 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mrz.practiceandtest.TestTextViewActivity">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="YY"
-            android:layout_height="wrap_content" />
-        <TextView
+    <com.example.mrz.practiceandtest.view.RoundAngleFrameLayout xmlns:mrz="http://schemas.android.com/apk/res/com.example.mrz.practiceandtest"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+
+        mrz:radius="15dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#3ff" />
+
+        <com.example.mrz.practiceandtest.view.RotateTextView
             android:id="@+id/tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            tools:text="900002" />
-    </LinearLayout>
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:background="@mipmap/homepage_discount"
+            android:gravity="end"
+            android:paddingLeft="4dp"
+            android:text="8.8折"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+    </com.example.mrz.practiceandtest.view.RoundAngleFrameLayout>
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="180dp">-->
+
+
+    <!--</FrameLayout>-->
 </RelativeLayout>

@@ -4,25 +4,47 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
-    <!--<com.example.mrz.practiceandtest.view.RoundAngleFrameLayout -->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--mrz:radius="5dp">-->
+    <!--<com.example.mrz.practiceandtest.view.RoundAngleFrameLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--xmlns:mrz="http://schemas.android.com/apk/res/com.example.mrz.practiceandtest"-->
+    <!--mrz:radius="5dp">-->
 
-        <!--<ImageView-->
-            <!--android:id="@+id/college_list_img"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:src="@mipmap/course_cover" />-->
+    <!--<ImageView-->
+    <!--android:id="@+id/college_list_img"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:src="@mipmap/course_cover" />-->
 
     <!--</com.example.mrz.practiceandtest.view.RoundAngleFrameLayout>-->
 
-    <com.example.mrz.practiceandtest.view.PathRoundView
-        xmlns:mrz="http://schemas.android.com/apk/res/com.example.mrz.practiceandtest"
+    <!--<com.example.mrz.practiceandtest.view.PathRoundView-->
+    <!--xmlns:mrz="http://schemas.android.com/apk/res/com.example.mrz.practiceandtest"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--mrz:radius="5dp"-->
+    <!--android:src="@mipmap/course_cover" />-->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        mrz:radius="5dp"
-        android:src="@mipmap/course_cover" />
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="4dp"
+            android:layout_height="10dp"
+
+            android:background="@mipmap/stock_list_down" />
+
+        <ImageView
+            android:layout_width="4dp"
+            android:layout_height="10dp"
+            android:layout_gravity="bottom"
+            android:src="@mipmap/stock_list_normal" />
+
+        <ImageView
+            android:layout_width="4dp"
+            android:layout_height="10dp"
+            android:background="@mipmap/stock_list_up" />
+    </LinearLayout>
 </LinearLayout>

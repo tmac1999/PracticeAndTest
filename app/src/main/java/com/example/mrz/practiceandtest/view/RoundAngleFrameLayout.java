@@ -61,7 +61,7 @@ public class RoundAngleFrameLayout extends FrameLayout {
 
     @Override
     protected void dispatchDraw(Canvas canvas) {
-        canvas.saveLayer(new RectF(0, 0, canvas.getWidth(), canvas.getHeight()), imagePaint, Canvas.ALL_SAVE_FLAG);
+       canvas.saveLayer(new RectF(0, 0, canvas.getWidth(), canvas.getHeight()), imagePaint, Canvas.CLIP_TO_LAYER_SAVE_FLAG);
         super.dispatchDraw(canvas);
         drawTopLeft(canvas);
         drawTopRight(canvas);
