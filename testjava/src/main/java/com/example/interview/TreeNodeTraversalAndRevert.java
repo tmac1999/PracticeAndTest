@@ -1,5 +1,6 @@
 package com.example.interview;
 
+import java.util.ArrayList;
 import java.util.Stack;
 
 /**
@@ -7,7 +8,7 @@ import java.util.Stack;
  */
 
 public class TreeNodeTraversalAndRevert {
-    public static class TreeNode{
+    public static class TreeNode {
         @Override
         public String toString() {
             return "TreeNode{" +
@@ -20,14 +21,11 @@ public class TreeNodeTraversalAndRevert {
         private TreeNode left;
         private TreeNode right;
         private String name;
+
         public TreeNode(String name) {
             this.name = name;
         }
     }
-
-
-
-
 
 
     /// 前序遍历
@@ -52,14 +50,13 @@ public class TreeNodeTraversalAndRevert {
      *    7 8
      */
     /**
-     *
-     前序遍历：1  2  4  5  7  8  3  6
-
-     中序遍历：4  2  7  5  8  1  3  6
-
-     后序遍历：4  7  8  5  2  6  3  1
-
-     层次遍历：1  2  3  4  5  6  7  8
+     * 前序遍历：1  2  4  5  7  8  3  6
+     * <p>
+     * 中序遍历：4  2  7  5  8  1  3  6
+     * <p>
+     * 后序遍历：4  7  8  5  2  6  3  1
+     * <p>
+     * 层次遍历：1  2  3  4  5  6  7  8
      */
     public static void main(String[] args) {
         TreeNode t1 = new TreeNode("1");
@@ -83,57 +80,91 @@ public class TreeNodeTraversalAndRevert {
         //System.out.println("==========");
 
         //t1.PreOrderTraversal();
-        PreOrderTraversal(t1);
-        System.out.println("==========");
-        inOrderTraversal(t1);
-        System.out.println("==========");
-        postOrderTraversal(t1);
+//        PreOrderTraversal(t1);
+//        System.out.println("==========");
+//        inOrderTraversal(t1);
+//        System.out.println("==========");
+//        postOrderTraversal(t1);
+        layerTraversal(t1);
     }
 
-    public static void PreOrderTraversal(TreeNode t){
-        if (t==null){
+    public static void PreOrderTraversal(TreeNode t) {
+        if (t == null) {
             return;
         }
-        System.out.print(t.name+"-");
-        if (t.left!=null){
+        System.out.print(t.name + "-");
+        if (t.left != null) {
             PreOrderTraversal(t.left);
         }
-        if (t.right!=null){
+        if (t.right != null) {
             PreOrderTraversal(t.right);
         }
 
 
     }
-    public static void inOrderTraversal(TreeNode t){
-        if (t==null){
+
+    public static void inOrderTraversal(TreeNode t) {
+        if (t == null) {
             return;
         }
 
         //if (t.left!=null)
         inOrderTraversal(t.left);
         //}
-        System.out.print(t.name+"-");
+        System.out.print(t.name + "-");
         //if (t.right!=null){
         inOrderTraversal(t.right);
-       // }
+        // }
 
 
     }
-    public static void postOrderTraversal(TreeNode t){
-        if (t==null){
+
+    public static void postOrderTraversal(TreeNode t) {
+        if (t == null) {
             return;
         }
 
-        if (t.left!=null){
+        if (t.left != null) {
             postOrderTraversal(t.left);
         }
-        if (t.right!=null){
+        if (t.right != null) {
             postOrderTraversal(t.right);
         }
-        System.out.print(t.name+"-");
+        System.out.print(t.name + "-");
 
     }
 
+    public static void layerTraversal(TreeNode t) {
+        if (t == null) {
+            return;
+        }
+        System.out.print(t.name + "-");
+        ArrayList<TreeNode> treeNodes = new ArrayList<>();
+        if (t.left != null) {
+            //System.out.print(t.left.name + "-");
+            treeNodes.add(t.left);
+        }
+        if (t.right != null) {
+            //System.out.print(t.right.name + "-");
+            treeNodes.add(t.right);
+        }
+        layerTraversal(treeNodes);
+
+
+    }
+
+    private static void layerTraversal(ArrayList<TreeNode> treeNodes) {
+        ArrayList<TreeNode> treeNodes1 = new ArrayList<>();
+        if (treeNodes.size()==0) return;
+        for (TreeNode treeNode : treeNodes) {
+            System.out.print(treeNode.name + "-");
+            if (treeNode.left!=null)
+            treeNodes1.add(treeNode.left);
+            if (treeNode.right!=null)
+            treeNodes1.add(treeNode.right);
+        }
+        layerTraversal(treeNodes1);
+    }
 
     public static class Solution {
         /**
