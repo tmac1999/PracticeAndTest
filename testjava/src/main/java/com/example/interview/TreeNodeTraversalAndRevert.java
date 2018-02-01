@@ -1,6 +1,7 @@
 package com.example.interview;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Stack;
 
 /**
@@ -85,7 +86,8 @@ public class TreeNodeTraversalAndRevert {
 //        inOrderTraversal(t1);
 //        System.out.println("==========");
 //        postOrderTraversal(t1);
-        layerTraversal(t1);
+       // layerTraversal(t1);
+        nonRecursiveTraversal(t1);
     }
 
     public static void PreOrderTraversal(TreeNode t) {
@@ -155,16 +157,69 @@ public class TreeNodeTraversalAndRevert {
 
     private static void layerTraversal(ArrayList<TreeNode> treeNodes) {
         ArrayList<TreeNode> treeNodes1 = new ArrayList<>();
-        if (treeNodes.size()==0) return;
+        if (treeNodes.size() == 0) return;
         for (TreeNode treeNode : treeNodes) {
+
+            if (treeNode.left != null)
+                treeNodes1.add(treeNode.left);
             System.out.print(treeNode.name + "-");
-            if (treeNode.left!=null)
-            treeNodes1.add(treeNode.left);
-            if (treeNode.right!=null)
-            treeNodes1.add(treeNode.right);
+            if (treeNode.right != null)
+                treeNodes1.add(treeNode.right);
         }
         layerTraversal(treeNodes1);
     }
+
+    public void levelTraverse(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            System.out.print(node.name + "  ");
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+        }
+    }
+
+    public static void nonRecursiveTraversal(TreeNode t) {
+        if (t == null) return;
+        Stack<TreeNode> stack = new Stack<>();
+        //LinkedList<TreeNode> stack = new LinkedList<>();
+        stack.add(t);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+
+            if (node.right != null) stack.push(node.right);
+            if (node.left != null) stack.push(node.left);
+            System.out.print(node.name + "-");
+
+        }
+
+    }
+    public static void depthOrderTraverse(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        LinkedList<TreeNode> stack = new LinkedList<>();
+        stack.push(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            System.out.print(node.name+"  ");
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+    }
+
 
     public static class Solution {
         /**
