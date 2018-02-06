@@ -13,7 +13,7 @@
     <com.example.mrz.practiceandtest.view.RoundAngleFrameLayout xmlns:mrz="http://schemas.android.com/apk/res/com.example.mrz.practiceandtest"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-
+        android:id="@+id/rafl"
         mrz:radius="15dp">
 
         <View

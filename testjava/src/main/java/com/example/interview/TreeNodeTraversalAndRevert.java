@@ -87,7 +87,10 @@ public class TreeNodeTraversalAndRevert {
 //        System.out.println("==========");
 //        postOrderTraversal(t1);
        // layerTraversal(t1);
-        nonRecursiveTraversal(t1);
+       // nonRecursiveTraversal(t1);
+        layerTraversal(t1);
+        System.out.println("==========");
+        layerTraversal(new Solution().invertTree(t1));
     }
 
     public static void PreOrderTraversal(TreeNode t) {
