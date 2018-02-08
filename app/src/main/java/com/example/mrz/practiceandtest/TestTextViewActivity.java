@@ -23,3 +23,6 @@ public class TestTextViewActivity extends AppCompatActivity {
         });
     }
 }
+class Proxy{
+
+}
