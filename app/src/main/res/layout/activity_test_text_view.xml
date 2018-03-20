@@ -10,31 +10,31 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mrz.practiceandtest.TestTextViewActivity">
 
-    <com.example.mrz.practiceandtest.view.RoundAngleFrameLayout xmlns:mrz="http://schemas.android.com/apk/res/com.example.mrz.practiceandtest"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:id="@+id/rafl"
-        mrz:radius="15dp">
+    <!--<com.example.mrz.practiceandtest.view.RoundAngleFrameLayout xmlns:mrz="http://schemas.android.com/apk/res/com.example.mrz.practiceandtest"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="180dp"-->
+    <!--android:id="@+id/rafl"-->
+    <!--mrz:radius="15dp">-->
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#3ff" />
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="#3ff" />-->
 
-        <com.example.mrz.practiceandtest.view.RotateTextView
-            android:id="@+id/tv"
-            android:layout_width="52dp"
-            android:layout_height="52dp"
-            android:layout_alignParentEnd="true"
-            android:layout_gravity="end"
-            android:background="@mipmap/homepage_discount"
-            android:gravity="end"
-            android:paddingLeft="4dp"
-            android:text="8.8折"
-            android:textColor="#fff"
-            android:textSize="14sp" />
+    <!--<com.example.mrz.practiceandtest.view.RotateTextView-->
+    <!--android:id="@+id/tv"-->
+    <!--android:layout_width="52dp"-->
+    <!--android:layout_height="52dp"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_gravity="end"-->
+    <!--android:background="@mipmap/homepage_discount"-->
+    <!--android:gravity="end"-->
+    <!--android:paddingLeft="4dp"-->
+    <!--android:text="8.8折"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="14sp" />-->
 
-    </com.example.mrz.practiceandtest.view.RoundAngleFrameLayout>
+    <!--</com.example.mrz.practiceandtest.view.RoundAngleFrameLayout>-->
 
     <!--<FrameLayout-->
     <!--android:layout_width="match_parent"-->
@@ -42,4 +42,44 @@
 
 
     <!--</FrameLayout>-->
+    <!--<TextView-->
+    <!--android:layout_marginTop="100dp"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:id="@+id/tv"-->
+    <!--android:text="a打大萨达大打"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:background="#efa"
+        android:layout_height="match_parent"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:background="#efa"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:background="#efa"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:background="#efa"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:background="#efa"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </FrameLayout>
+                </FrameLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </FrameLayout>
 </RelativeLayout>

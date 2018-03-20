@@ -6,17 +6,27 @@ package com.example;
 
 public class TestFinal {
     public static void main(String args[]) {
-        String a = "go die, ";
-        final String b = "final";
-        String c = "go die, " + b;
-        String d = a + b;
-        String e = "go die, final";
-        System.out.println(e == c); //true，比较两个变量是否指向同一个对象
-        System.out.println(e == d); //false
-        System.out.println(c.equals(d));//true，比较两个字符串的值是否相同
+//        String a = "go die, ";
+//        final String b = "final";
+//        String c = "go die, " + b;
+//        String d = a + b;
+//        String e = "go die, final";
+//        System.out.println(e == c); //true，比较两个变量是否指向同一个对象
+//        System.out.println(e == d); //false
+//        System.out.println(c.equals(d));//true，比较两个字符串的值是否相同
+//
+//        System.out.println(((Long)1000L) == 1000);
+//        System.out.println(((Long)1000L) == Long.valueOf(1000));
+//        System.out.println(new Long(1).equals(1L));
 
-        System.out.println(((Long)1000L) == 1000);
-        System.out.println(((Long)1000L) == Long.valueOf(1000));
-        System.out.println(new Long(1).equals(1L));
+
+        String s = "hello ";
+        String s1 = s + new String("world");
+        String s3 = "world";
+        String s2 = "hello world";
+        String s4 = s + s3;
+        System.out.println(s1 == s2);
+        System.out.println(s1.equals(s2));
+        System.out.println(s2 == s4);
     }
 }

@@ -16,9 +16,12 @@ public class MyClass {
 //        System.out.println(text);
 //        change(text);
 //        System.out.println(text);
-        int fileCount = getFileCount(new File("/Users/lianhua/Downloads/PracticeAndTest"));
-        System.out.println(":" + fileCount);
+       // int fileCount = getFileCount(new File("/Users/lianhua/Downloads/PracticeAndTest"));
+       // System.out.println(":" + fileCount);
        // getFileCount(null);
+        boolean aab = new Solution().isMatch("aab", "c*a*b");
+        System.out.println(":" + aab);
+        Singleton.INSTANCE.doSometing();
     }
     static int i = 0;
     public static int getFileCount(File f) {
@@ -50,5 +53,27 @@ public class MyClass {
         String regex = ".*[a-zA-Z]+.*";
         Matcher m = Pattern.compile(regex).matcher(cardNum);
         return m.matches();
+    }
+
+    static class Solution {
+        public boolean isMatch(String text, String pattern) {
+            if (pattern.isEmpty()) return text.isEmpty();
+            boolean first_match = (!text.isEmpty() &&
+                    (pattern.charAt(0) == text.charAt(0) || pattern.charAt(0) == '.'));
+
+            if (pattern.length() >= 2 && pattern.charAt(1) == '*'){
+                return (isMatch(text, pattern.substring(2)) ||
+                        (first_match && isMatch(text.substring(1), pattern)));
+            } else {
+                return first_match && isMatch(text.substring(1), pattern.substring(1));
+            }
+        }
+    }
+
+    enum Singleton{
+        INSTANCE;
+        public void doSometing(){
+
+        }
     }
 }

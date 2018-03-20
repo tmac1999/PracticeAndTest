@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 
 public class TestImageViewActivity extends AppCompatActivity {
-
+    ListView lv = (ListView) findViewById(R.id.lv);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

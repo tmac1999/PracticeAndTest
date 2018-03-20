@@ -67,6 +67,7 @@ public class PathRoundView extends AppCompatImageView {
         drawBottomLeft(canvas);
         drawBottomRight(canvas);
         canvas.restore();
+        //roundPaint.getTextBounds();
     }
 
 //    @Override
