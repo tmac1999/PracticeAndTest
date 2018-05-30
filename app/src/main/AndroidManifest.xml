@@ -12,9 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-
-            android:name=".MainActivity">
+        <activity android:name=".TestImageViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +24,8 @@
         <!-- <activity android:name=".TestPermissionActivity"></activity> -->
         <!-- <activity android:name=".TestImageViewActivity"></activity> -->
         <!-- <activity android:name=".TestRoundViewActivity"></activity> -->
-        <activity android:name=".TestTextViewActivity"></activity>
+        <activity android:name=".TestTextViewActivity" />
+        <!--<activity android:name=".ShadowLineActivity" />-->
     </application>
 
 </manifest>

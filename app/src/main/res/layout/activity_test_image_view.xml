@@ -9,11 +9,50 @@
     <ListView
         android:id="@+id/lv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:visibility="gone" />
     <!--<TextView-->
-        <!--android:layout_width="97dp"-->
-        <!--android:layout_height="73dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:text="why cant open me" />-->
+    <!--android:layout_width="97dp"-->
+    <!--android:layout_height="73dp"-->
+    <!--android:layout_marginBottom="8dp"-->
+    <!--android:layout_marginEnd="8dp"-->
+    <!--android:text="why cant open me" />-->
+    <com.example.mrz.practiceandtest.view.SlidingTabLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tl="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/id_slidingtab_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        tl:tl_indicator_color="#92C94A"
+        tl:tl_indicator_height="2dp"
+        tl:tl_indicator_margin_bottom="3dp"
+        tl:tl_indicator_margin_top="5dp"
+        tl:tl_indicator_width="36dp"
+
+        tl:tl_tab_width="110dp"
+        tl:tl_textSelectColor="#92C94A"
+        tl:tl_textUnselectColor="#78000000"
+        tl:tl_textsize="16dp"
+
+
+
+
+        tl:tl_indicator_width_equal_title="true"
+        tl:tl_tab_space_equal="true"
+        />
+
+
+    <!--tl:tl_indicator_color="@color/tab_text_color_selected"-->
+    <!--tl:tl_indicator_height="2dp"-->
+    <!--tl:tl_indicator_width_equal_title="true"-->
+    <!--tl:tl_tab_space_equal="true"-->
+    <!--tl:tl_textSelectColor="@color/tab_text_color_selected"-->
+    <!--tl:tl_textUnselectColor="@color/tab_text_color_normal"-->
+    <!--tl:tl_textsize="14sp"-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
