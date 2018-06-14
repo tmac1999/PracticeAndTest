@@ -2,6 +2,7 @@ package com.example.mrz.practiceandtest;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -13,7 +14,7 @@ import com.example.mrz.practiceandtest.view.SlidingTabLayout;
 import java.util.ArrayList;
 
 public class TestImageViewActivity extends AppCompatActivity {
-//    ListView lv = (ListView) findViewById(R.id.lv);
+    //    ListView lv = (ListView) findViewById(R.id.lv);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,10 +50,10 @@ public class TestImageViewActivity extends AppCompatActivity {
         BlankFragment blankFragment = new BlankFragment();
         BlankFragment blankFragment1 = new BlankFragment();
         BlankFragment blankFragment2 = new BlankFragment();
-       final ArrayList<BlankFragment> list = new ArrayList<>();
+        final ArrayList<BlankFragment> list = new ArrayList<>();
         list.add(blankFragment);
         list.add(blankFragment1);
-       // list.add(blankFragment2);
+        // list.add(blankFragment2);
         vp.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
             @Override
             public int getCount() {
@@ -61,15 +62,17 @@ public class TestImageViewActivity extends AppCompatActivity {
 
             @Override
             public Fragment getItem(int position) {
+                getScreenWidth(null);
+
                 return list.get(position);
             }
         });
         String[] strings = {"阿萨德", "阿萨德到底"};
         id_slidingtab_indicator.setViewPager(vp, strings);
-
+        getScreenWidth(this);
     }
 
-    public static int getScreenWidth(Activity activity) {
+    public static int getScreenWidth(@NonNull Activity activity) {
         DisplayMetrics metrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(metrics);
         return metrics.widthPixels;
