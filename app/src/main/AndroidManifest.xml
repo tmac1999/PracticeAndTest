@@ -13,11 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TestConstraintActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <!-- <activity android:name=".TestTextViewActivity"></activity> -->
         <!-- <activity android:name=".TestCropImgActivity"></activity> -->
@@ -26,7 +22,15 @@
         <!-- <activity android:name=".TestRoundViewActivity"></activity> -->
         <activity android:name=".TestTextViewActivity" />
         <!-- <activity android:name=".ShadowLineActivity" /> -->
-        <!--<activity android:name=".TestConstraintActivity"></activity>-->
+        <!-- <activity android:name=".TestConstraintActivity"></activity> -->
+        <activity android:name=".RotateImageViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
