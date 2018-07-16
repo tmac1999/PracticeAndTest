@@ -1,25 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+<!--android:left="6dp"
+        android:top="6dp"
+        android:right="6dp"
+        android:bottom="6dp"-->
+    <!--阴影-->
+    <item
 
-    <!-- bottom shadow -->
-    <item>
-        <shape android:shape="rectangle" >
-            <!-- from top to bottom -->
+        >
+        <shape android:shape="rectangle">
             <gradient
-                android:angle="270"
-                android:centerColor="#bbbbbb"
-                android:endColor="#d5d5d5"
-                android:startColor="#a9a09d" />
-            <!--<corners android:radius="5dp" />-->
+                android:type="radial"
+                android:gradientRadius="30"
+                android:endColor="#345"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:startColor="#0345"/>
+
+            <corners
+                android:bottomLeftRadius="6dip"
+                android:bottomRightRadius="6dip"
+                android:topLeftRadius="6dip"
+                android:topRightRadius="6dip"/>
+        </shape>
+    </item>
+    <!--阴影-->
+
+    <!--白色背景-->
+    <item
+        android:left="8dp"
+        android:top="8dp"
+        android:bottom="8dp"
+        android:right="8dp">
+
+        <shape android:shape="rectangle">
+            <solid android:color="#fff"/>
+            <stroke />
+            <corners
+                android:bottomLeftRadius="6dip"
+                android:bottomRightRadius="6dip"
+                android:topLeftRadius="6dip"
+                android:topRightRadius="6dip"/>
         </shape>
     </item>
 
-    <!-- content -->
-    <!--<item android:bottom="52dp">-->
-        <!--<shape android:shape="rectangle" >-->
-            <!--<solid android:color="#50c1e9" />-->
-            <!--<corners android:radius="5dp" />-->
-        <!--</shape>-->
-    <!--</item>-->
 
 </layer-list>
