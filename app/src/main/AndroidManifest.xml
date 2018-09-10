@@ -12,19 +12,22 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TestConstraintActivity"></activity>
+        <activity android:name=".TestConstraintActivity" />
         <!-- <activity android:name=".TestTextViewActivity"></activity> -->
         <!-- <activity android:name=".TestCropImgActivity"></activity> -->
         <!-- <activity android:name=".TestPermissionActivity"></activity> -->
         <!-- <activity android:name=".TestImageViewActivity"></activity> -->
         <!-- <activity android:name=".TestRoundViewActivity"></activity> -->
         <activity android:name=".TestTextViewActivity" />
-        <activity android:name=".ShadowLineActivity">
+        <activity android:name=".ShadowLineActivity"></activity>
+        <!-- <activity android:name=".TestConstraintActivity"></activity> -->
+        <activity android:name=".RotateImageViewActivity" />
+        <activity android:name=".TestGridRecycleViewActivity">
 
         </activity>
-        <!-- <activity android:name=".TestConstraintActivity"></activity> -->
-        <activity android:name=".RotateImageViewActivity"></activity>
-        <activity android:name=".TestGridRecycleViewActivity">
+        <activity
+            android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

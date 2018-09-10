@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mrz.practiceandtest.LoginActivity">
+
+    <EditText
+        android:id="@+id/cet_phone_num"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+
+        android:background="@null"
+        android:drawablePadding="20dp"
+        android:hint="请输入手机号"
+        android:inputType="number"
+        android:maxLength="11"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:textCursorDrawable="@null" />
+
+    <EditText
+        android:id="@+id/cet_phone_num1"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawablePadding="20dp"
+        android:hint="请输入手机号"
+        android:inputType="number"
+        android:maxLength="11"
+        android:maxLines="1"
+        android:padding="10dp"
+        android:textCursorDrawable="@null" />
+
+    <com.example.mrz.practiceandtest.view.ArcProgressView
+        android:layout_width="56dp"
+        android:layout_height="56dp" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_click"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:background="#456"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_click"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:background="#ff1" />
+
+    </LinearLayout>
+</LinearLayout>
