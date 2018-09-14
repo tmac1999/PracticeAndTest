@@ -20,13 +20,13 @@ public class LoginActivity extends AppCompatActivity {
                 ToastUtils.showShort("content");
             }
         });
-        findViewById(R.id.ll_click).setOnClickListener(new View.OnClickListener(){
+        findViewById(R.id.ll_click).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ToastUtils.showShort("lllllll");
             }
         });
-        findViewById(R.id.iv_click).setOnClickListener(new View.OnClickListener(){
+        findViewById(R.id.iv_click).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ToastUtils.showShort("imageview");
