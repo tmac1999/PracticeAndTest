@@ -19,6 +19,8 @@ class Child extends Father {
     public void initName(String s) {
         name = s;
     }
+
+
 }
 
 public class TestObjectMember {
@@ -30,6 +32,7 @@ public class TestObjectMember {
         Child.BASE = "aaa";
 
         Print.pln(Child.URL);
+        Child.class.getAnnotations();
 
     }
 }
