@@ -2,10 +2,6 @@ package com.example.mrz.practiceandtest;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-
-import com.blankj.utilcode.util.ToastUtils;
-import com.blankj.utilcode.util.Utils;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -13,25 +9,25 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Utils.init(getApplication());
-        findViewById(R.id.content).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ToastUtils.showShort("content");
-            }
-        });
-        findViewById(R.id.ll_click).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ToastUtils.showShort("lllllll");
-            }
-        });
-        findViewById(R.id.iv_click).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ToastUtils.showShort("imageview");
-            }
-        });
+//        Utils.init(getApplication());
+//        findViewById(R.id.content).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ToastUtils.showShort("content");
+//            }
+//        });
+//        findViewById(R.id.ll_click).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ToastUtils.showShort("lllllll");
+//            }
+//        });
+//        findViewById(R.id.iv_click).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ToastUtils.showShort("imageview");
+//            }
+//        });
     }
 //    @Override
 //    public void onKeyboardShow() {

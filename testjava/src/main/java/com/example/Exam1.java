@@ -26,6 +26,9 @@ public class Exam1 {
         System.out.println("======" + s3);
         System.out.println("======" + s4);
         System.out.println("======" + s5);
+
+
+
     }
 
     private static int getSecondLargestNumInArray(int[] a) {
