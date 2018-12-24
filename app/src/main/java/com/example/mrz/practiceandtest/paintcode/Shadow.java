@@ -1,4 +1,4 @@
-package com.gaosi.view.paintcode;
+package com.example.mrz.practiceandtest.paintcode;
 
 import android.content.Context;
 import android.graphics.Canvas;
